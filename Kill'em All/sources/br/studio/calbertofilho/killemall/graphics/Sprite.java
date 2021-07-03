@@ -77,7 +77,7 @@ public class Sprite {
 		return SPRITESHEET;
 	}
 
-	private BufferedImage getSprite(int i, int j) {
+	public BufferedImage getSprite(int i, int j) {
 		return getSpriteSheet().getSubimage(i * width, j * height, width, height);
 	}
 

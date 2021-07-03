@@ -22,10 +22,10 @@ public class PlayState extends AbstractState {
 
 	public PlayState(GameManager gameManager) {
 		super(gameManager);
-		tileManager = new TileManager("assets\\tiles\\tilemap.tmx");
 		score = 0;
 		fontSize = 20;
 		offSet = 20;
+		tileManager = new TileManager("assets\\tiles\\tilemap.tmx");
 		font00 = new Font("assets\\fonts\\font.png", 10, 10);
 		font01 = new Font("assets\\fonts\\fontBattleCircuit.png", 40, 40);
 		font02 = new Font("assets\\fonts\\fontDragonBreed.png", 40, 40);
@@ -64,6 +64,7 @@ public class PlayState extends AbstractState {
 		fps = Panel.getFPS() + " FPS ";
 		text00 = "The quick brown fox jumps over the lazy dog";
 		text01 = "A rapida raposa marrom pula sobre o cao preguicoso";
+		tileManager.render(graphics);
 		Sprite.drawArray(graphics, font05, fps,  new VectorPosition(GameManager.getGameWidth() - (fps.length() * fontSize), 10), fontSize, fontSize, offSet, 0);
 		Sprite.drawArray(graphics, font01, text00, new VectorPosition(10, 10), fontSize, fontSize, offSet, 0);
 		Sprite.drawArray(graphics, font03, text01, new VectorPosition(10, 10 + fontSize + 5), fontSize, fontSize, offSet, 0);
