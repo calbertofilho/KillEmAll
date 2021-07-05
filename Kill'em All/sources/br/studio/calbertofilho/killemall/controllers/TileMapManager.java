@@ -14,7 +14,7 @@ import org.w3c.dom.NodeList;
 
 import br.studio.calbertofilho.killemall.objects.TileMap;
 import br.studio.calbertofilho.killemall.objects.tiles.TileNormal;
-import br.studio.calbertofilho.killemall.objects.tiles.TileObject;
+import br.studio.calbertofilho.killemall.objects.tiles.TileDecoration;
 import br.studio.calbertofilho.killemall.view.graphics.Sprite;
 
 public class TileMapManager {
@@ -78,7 +78,7 @@ public class TileMapManager {
 				if (i >= 1)
 					tileMap.add(new TileNormal(data[i], sprite, width, height, blockWidth, blockHeight, tileColumns));
 				else
-					tileMap.add(new TileObject(data[i], sprite, width, height, blockWidth, blockHeight, tileColumns));
+					tileMap.add(new TileDecoration(data[i], sprite, width, height, blockWidth, blockHeight, tileColumns));
 			}
 		} catch (Exception e) {
 			System.out.println("ERROR: Can not read tilemap");

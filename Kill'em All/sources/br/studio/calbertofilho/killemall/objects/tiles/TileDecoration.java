@@ -10,14 +10,14 @@ import br.studio.calbertofilho.killemall.objects.blocks.HoleBlock;
 import br.studio.calbertofilho.killemall.objects.blocks.DecorationBlock;
 import br.studio.calbertofilho.killemall.view.graphics.Sprite;
 
-public class TileObject extends TileMap {
+public class TileDecoration extends TileMap {
 
 	private static HashMap<String, Block> objects;
 	private String[] tmpBlock;
 	private Block tempBlock;
 	private int tmp;
 
-	public TileObject(String data, Sprite sprite, int width, int height, int tileWidth, int tileHeight, int tileColumns) {
+	public TileDecoration(String data, Sprite sprite, int width, int height, int tileWidth, int tileHeight, int tileColumns) {
 		objects = new HashMap<String, Block>();
 		tmpBlock = data.split(",");
 		for (int i = 0; i < (width * height); i++) {
