@@ -7,10 +7,10 @@ import br.studio.calbertofilho.killemall.controllers.GameManager;
 import br.studio.calbertofilho.killemall.controllers.TileMapManager;
 import br.studio.calbertofilho.killemall.controllers.handlers.KeyboardHandler;
 import br.studio.calbertofilho.killemall.controllers.handlers.MouseHandler;
-import br.studio.calbertofilho.killemall.graphics.Font;
-import br.studio.calbertofilho.killemall.graphics.Sprite;
 import br.studio.calbertofilho.killemall.objects.entities.characters.Player;
 import br.studio.calbertofilho.killemall.view.Panel;
+import br.studio.calbertofilho.killemall.view.graphics.Font;
+import br.studio.calbertofilho.killemall.view.graphics.Sprite;
 
 public class PlayState extends AbstractState {
 

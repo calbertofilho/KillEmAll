@@ -7,8 +7,8 @@ import br.studio.calbertofilho.killemall.containers.AABB;
 import br.studio.calbertofilho.killemall.containers.VectorPosition;
 import br.studio.calbertofilho.killemall.controllers.handlers.KeyboardHandler;
 import br.studio.calbertofilho.killemall.controllers.handlers.MouseHandler;
-import br.studio.calbertofilho.killemall.graphics.Animation;
-import br.studio.calbertofilho.killemall.graphics.Sprite;
+import br.studio.calbertofilho.killemall.view.graphics.Animation;
+import br.studio.calbertofilho.killemall.view.graphics.Sprite;
 
 public abstract class Character {
 

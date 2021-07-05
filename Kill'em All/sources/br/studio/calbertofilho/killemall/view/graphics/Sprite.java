@@ -1,4 +1,4 @@
-package br.studio.calbertofilho.killemall.graphics;
+package br.studio.calbertofilho.killemall.view.graphics;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
