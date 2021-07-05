@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import br.studio.calbertofilho.killemall.containers.TileMap;
 import br.studio.calbertofilho.killemall.containers.VectorPosition;
 import br.studio.calbertofilho.killemall.graphics.Sprite;
-import br.studio.calbertofilho.killemall.tiles.blocks.NormalBlock;
+import br.studio.calbertofilho.killemall.objects.tiles.blocks.NormalBlock;
 
 public class TileNormal extends TileMap {
 

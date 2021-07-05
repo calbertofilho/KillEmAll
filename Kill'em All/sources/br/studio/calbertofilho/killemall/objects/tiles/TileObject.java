@@ -6,8 +6,8 @@ import java.util.HashMap;
 import br.studio.calbertofilho.killemall.containers.TileMap;
 import br.studio.calbertofilho.killemall.containers.VectorPosition;
 import br.studio.calbertofilho.killemall.graphics.Sprite;
-import br.studio.calbertofilho.killemall.tiles.blocks.HoleBlock;
-import br.studio.calbertofilho.killemall.tiles.blocks.ObjectBlock;
+import br.studio.calbertofilho.killemall.objects.tiles.blocks.HoleBlock;
+import br.studio.calbertofilho.killemall.objects.tiles.blocks.ObjectBlock;
 
 public class TileObject extends TileMap {
 
