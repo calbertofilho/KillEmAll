@@ -14,8 +14,8 @@ import org.w3c.dom.NodeList;
 
 import br.studio.calbertofilho.killemall.containers.TileMap;
 import br.studio.calbertofilho.killemall.graphics.Sprite;
-import br.studio.calbertofilho.killemall.tiles.TileNormal;
-import br.studio.calbertofilho.killemall.tiles.TileObject;
+import br.studio.calbertofilho.killemall.objects.tiles.TileNormal;
+import br.studio.calbertofilho.killemall.objects.tiles.TileObject;
 
 public class TileMapManager {
 

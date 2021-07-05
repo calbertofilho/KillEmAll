@@ -1,4 +1,4 @@
-package br.studio.calbertofilho.killemall.tiles;
+package br.studio.calbertofilho.killemall.objects.tiles;
 
 import java.awt.Graphics2D;
 import java.util.ArrayList;

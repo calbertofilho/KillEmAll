@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 
 import br.studio.calbertofilho.killemall.containers.AABB;
 import br.studio.calbertofilho.killemall.containers.VectorPosition;
-import br.studio.calbertofilho.killemall.tiles.Block;
+import br.studio.calbertofilho.killemall.objects.tiles.Block;
 
 public class HoleBlock extends Block {
 
