@@ -7,7 +7,7 @@ import br.studio.calbertofilho.killemall.containers.VectorPosition;
 import br.studio.calbertofilho.killemall.objects.Block;
 import br.studio.calbertofilho.killemall.objects.TileMap;
 import br.studio.calbertofilho.killemall.objects.blocks.HoleBlock;
-import br.studio.calbertofilho.killemall.objects.blocks.ObjectBlock;
+import br.studio.calbertofilho.killemall.objects.blocks.DecorationBlock;
 import br.studio.calbertofilho.killemall.view.graphics.Sprite;
 
 public class TileObject extends TileMap {
@@ -26,7 +26,7 @@ public class TileObject extends TileMap {
 				if (tmp == 172)
 					tempBlock = new HoleBlock(sprite.getSprite((int) ((tmp - 1) % tileColumns), (int) ((tmp - 1) / tileColumns)), new VectorPosition(((int) (i % width)), ((int) (i / height))), tileWidth, tileHeight);
 				else
-					tempBlock = new ObjectBlock(sprite.getSprite((int) ((tmp - 1) % tileColumns), (int) ((tmp - 1) / tileColumns)), new VectorPosition(((int) (i % width)), ((int) (i / height))), tileWidth, tileHeight);
+					tempBlock = new DecorationBlock(sprite.getSprite((int) ((tmp - 1) % tileColumns), (int) ((tmp - 1) / tileColumns)), new VectorPosition(((int) (i % width)), ((int) (i / height))), tileWidth, tileHeight);
 			objects.put(String.valueOf((int) (i % width)) + "," + String.valueOf((int) (i / height)), tempBlock);
 		}
 	}
