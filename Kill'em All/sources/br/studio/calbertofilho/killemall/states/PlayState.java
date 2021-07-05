@@ -5,10 +5,10 @@ import java.awt.Graphics2D;
 import br.studio.calbertofilho.killemall.Panel;
 import br.studio.calbertofilho.killemall.containers.VectorPosition;
 import br.studio.calbertofilho.killemall.controllers.GameManager;
-import br.studio.calbertofilho.killemall.controllers.TileManager;
+import br.studio.calbertofilho.killemall.controllers.TileMapManager;
 import br.studio.calbertofilho.killemall.controllers.handlers.KeyboardHandler;
 import br.studio.calbertofilho.killemall.controllers.handlers.MouseHandler;
-import br.studio.calbertofilho.killemall.entities.objects.Player;
+import br.studio.calbertofilho.killemall.entities.characters.Player;
 import br.studio.calbertofilho.killemall.graphics.Font;
 import br.studio.calbertofilho.killemall.graphics.Sprite;
 
@@ -18,14 +18,14 @@ public class PlayState extends AbstractState {
 	private Player player;
 	private String fps, text00, text01;
 	private int score, fontSize, offSet;
-	private TileManager tileManager;
+	private TileMapManager tileManager;
 
 	public PlayState(GameManager gameManager) {
 		super(gameManager);
 		score = 0;
 		fontSize = 20;
 		offSet = 20;
-		tileManager = new TileManager("assets\\tiles\\tilemap.tmx");
+		tileManager = new TileMapManager("assets\\tiles\\tilemap.tmx");
 		font00 = new Font("assets\\fonts\\font.png", 10, 10);
 		font01 = new Font("assets\\fonts\\fontBattleCircuit.png", 40, 40);
 		font02 = new Font("assets\\fonts\\fontDragonBreed.png", 40, 40);
@@ -67,7 +67,7 @@ public class PlayState extends AbstractState {
 		tileManager.render(graphics);
 		Sprite.drawArray(graphics, font05, fps,  new VectorPosition(GameManager.getGameWidth() - (fps.length() * fontSize), 10), fontSize, fontSize, offSet, 0);
 		Sprite.drawArray(graphics, font01, text00, new VectorPosition(10, 10), fontSize, fontSize, offSet, 0);
-		Sprite.drawArray(graphics, font03, text01, new VectorPosition(10, 10 + fontSize + 5), fontSize, fontSize, offSet, 0);
+		Sprite.drawArray(graphics, font07, text01, new VectorPosition(10, 10 + fontSize + 5), fontSize, fontSize, offSet, 0);
 		Sprite.drawArray(graphics, font00, String.valueOf(score), new VectorPosition(GameManager.getGameWidth() - (String.valueOf(score).length() * fontSize), GameManager.getGameHeight() - fontSize - 8), fontSize, fontSize, 15, 0);
 		player.render(graphics);
 	}

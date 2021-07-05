@@ -6,9 +6,9 @@ import br.studio.calbertofilho.killemall.containers.AABB;
 import br.studio.calbertofilho.killemall.containers.VectorPosition;
 import br.studio.calbertofilho.killemall.tiles.Block;
 
-public class NormBlock extends Block {
+public class NormalBlock extends Block {
 
-	public NormBlock(BufferedImage image, VectorPosition position, int width, int height) {
+	public NormalBlock(BufferedImage image, VectorPosition position, int width, int height) {
 		super(image, position, width, height);
 	}
 

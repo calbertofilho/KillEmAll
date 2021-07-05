@@ -1,4 +1,4 @@
-package br.studio.calbertofilho.killemall.entities.objects;
+package br.studio.calbertofilho.killemall.entities.characters;
 
 import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;

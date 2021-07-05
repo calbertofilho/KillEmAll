@@ -14,10 +14,10 @@ import org.w3c.dom.NodeList;
 
 import br.studio.calbertofilho.killemall.containers.TileMap;
 import br.studio.calbertofilho.killemall.graphics.Sprite;
-import br.studio.calbertofilho.killemall.tiles.TileMapNorm;
-import br.studio.calbertofilho.killemall.tiles.TileMapObject;
+import br.studio.calbertofilho.killemall.tiles.TileNormal;
+import br.studio.calbertofilho.killemall.tiles.TileObject;
 
-public class TileManager {
+public class TileMapManager {
 
 	private final int DEFAULT_BLOCK_SIZE = 64;
 	private ArrayList<TileMap> tileMap;
@@ -32,11 +32,11 @@ public class TileManager {
 	private Node node;
 	private Element element;
 
-	public TileManager() {
+	public TileMapManager() {
 		tileMap = new ArrayList<TileMap>();
 	}
 
-	public TileManager(String path) {
+	public TileMapManager(String path) {
 		this();
 		System.out.println("Loading: " + path + "...");
 		addTileMap(path, DEFAULT_BLOCK_SIZE, DEFAULT_BLOCK_SIZE);
@@ -76,9 +76,9 @@ public class TileManager {
 				data[i] = element.getElementsByTagName("data").item(0).getTextContent();
 				System.out.println("------ " + layerName + " ------\n" + data[i]);
 				if (i >= 1)
-					tileMap.add(new TileMapNorm(data[i], sprite, width, height, blockWidth, blockHeight, tileColumns));
+					tileMap.add(new TileNormal(data[i], sprite, width, height, blockWidth, blockHeight, tileColumns));
 				else
-					tileMap.add(new TileMapObject(data[i], sprite, width, height, blockWidth, blockHeight, tileColumns));
+					tileMap.add(new TileObject(data[i], sprite, width, height, blockWidth, blockHeight, tileColumns));
 			}
 		} catch (Exception e) {
 			System.out.println("ERROR: Can not read tilemap");
