@@ -16,7 +16,21 @@ public class HoleBlock extends Block {
 
 	@Override
 	public boolean update(AABB p) {
+		if (isInside(p))
+			System.out.println("I'm in a hole...");
 		return false;
+	}
+
+	private boolean isInside(AABB p) {
+		if (p.getPosition().x + p.getXOffset() < position.x)
+			return false;
+		if (p.getPosition().y + p.getYOffset() < position.y)
+			return false;
+		if (width + position.x < p.getWidth() + (p.getPosition().x + p.getXOffset()))
+			return false;
+		if (height + position.y < p.getHeight() + (p.getPosition().y + p.getYOffset()))
+			return false;
+		return true;
 	}
 
 	@Override

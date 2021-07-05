@@ -37,4 +37,8 @@ public class TileSolid extends TileMap {
 			block.render(graphics);
 	}
 
+	public static HashMap<String, Block> getObjects() {
+		return objects;
+	}
+
 }

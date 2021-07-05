@@ -1,5 +1,6 @@
 package br.studio.calbertofilho.killemall.objects.characters;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
 
@@ -17,6 +18,10 @@ public class Player extends Character {
 		setMaxSpeed(3f);
 		setAcc(2f);
 		setDeacc(0.3f);
+		bounds.setWidth(42);
+		bounds.setHeight(20);
+		bounds.setXOffset(12);
+		bounds.setYOffset(40);
 	}
 
 	@Override
@@ -34,10 +39,14 @@ public class Player extends Character {
 	public void update() {
 		super.update();
 		move();
-		PlayState.setMapPosX(dx);
-		PlayState.setMapPosY(dy);
-		position.addX(dx);
-		position.addY(dy);
+		if (!bounds.collidesTile(dx, 0)) {
+			PlayState.addMapPosX(dx);
+			position.addX(dx);
+		}
+		if (!bounds.collidesTile(0, dy)) {
+			PlayState.addMapPosY(dy);
+			position.addY(dy);
+		}
 	}
 
 	protected void move() {
@@ -85,7 +94,9 @@ public class Player extends Character {
 
 	@Override
 	public void render(Graphics2D graphics) {
-		graphics.drawImage(animation.getImage(), ((int) position.getWorldVar().x), ((int) position.getWorldVar().y), size, size, null);
+		graphics.setColor(Color.BLUE);
+		graphics.drawRect(((int) (position.getWorldVar().x + bounds.getXOffset())), ((int) (position.getWorldVar().y + bounds.getYOffset())), (int) bounds.getWidth(), (int) bounds.getHeight());
+		graphics.drawImage(animation.getImage(), (int) (position.getWorldVar().x), (int) (position.getWorldVar().y), size, size, null);
 	}
 
 }

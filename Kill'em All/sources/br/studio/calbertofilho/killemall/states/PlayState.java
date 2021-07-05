@@ -50,11 +50,11 @@ public class PlayState extends AbstractState {
 //		player = new Player(new Sprite("assets\\images\\players\\sorcerer.png", 32, 32), new VectorPosition((GameManager.getGameWidth() / 2) - (PLAYER_SIZE / 2), (GameManager.getGameHeight() / 2) - (PLAYER_SIZE / 2)), PLAYER_SIZE);
 	}
 
-	public static void setMapPosX(float x) {
+	public static void addMapPosX(float x) {
 		map.x += x;
 	}
 
-	public static void setMapPosY(float y) {
+	public static void addMapPosY(float y) {
 		map.y += y;
 	}
 

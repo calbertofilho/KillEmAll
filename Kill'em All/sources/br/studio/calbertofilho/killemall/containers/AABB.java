@@ -1,13 +1,15 @@
 package br.studio.calbertofilho.killemall.containers;
 
 import br.studio.calbertofilho.killemall.objects.Character;
+import br.studio.calbertofilho.killemall.objects.tiles.TileSolid;
 
 public class AABB { //Axis Aligned Bounding Boxes
 
 	private VectorPosition position;
 	private float width, height, radius, xOffset, yOffset, ax, ay, bx, by, cx, cy, xDelta, yDelta;
-	private int size;
+	private int size, xt, yt;
 	private Character actor;
+	private String index;
 
 	public AABB(VectorPosition position, int width, int height) {
 		this();
@@ -100,6 +102,18 @@ public class AABB { //Axis Aligned Bounding Boxes
 		yDelta = cy - Math.max(boundingBox.position.getWorldVar().y + (boundingBox.getHeight() / 2), Math.min(cy, boundingBox.position.getWorldVar().y));
 		if ((xDelta * xDelta + yDelta * yDelta) < ((this.radius / Math.sqrt(2)) * (this.radius / Math.sqrt(2))))
 			return true;
+		return false;
+	}
+
+	public boolean collidesTile(float ax, float ay) {
+		for (int i = 0; i < 4; i++) {
+			xt = (int) ((position.x + ax) + (i % 2) * width + xOffset) / 64;
+			yt = (int) ((position.y + ay) + ((int) (i / 2)) * height + yOffset) / 64;
+			index = String.valueOf(xt) + "," + String.valueOf(yt);
+			if (TileSolid.getObjects().containsKey(index)) {
+				return TileSolid.getObjects().get(index).update(this);
+			}
+		}
 		return false;
 	}
 
