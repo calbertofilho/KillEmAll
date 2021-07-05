@@ -12,7 +12,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import br.studio.calbertofilho.killemall.containers.TileMap;
+import br.studio.calbertofilho.killemall.objects.TileMap;
 import br.studio.calbertofilho.killemall.objects.tiles.TileNormal;
 import br.studio.calbertofilho.killemall.objects.tiles.TileObject;
 import br.studio.calbertofilho.killemall.view.graphics.Sprite;

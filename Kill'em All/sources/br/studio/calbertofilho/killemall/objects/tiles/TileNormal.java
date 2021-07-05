@@ -3,9 +3,10 @@ package br.studio.calbertofilho.killemall.objects.tiles;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 
-import br.studio.calbertofilho.killemall.containers.TileMap;
 import br.studio.calbertofilho.killemall.containers.VectorPosition;
-import br.studio.calbertofilho.killemall.objects.tiles.blocks.NormalBlock;
+import br.studio.calbertofilho.killemall.objects.Block;
+import br.studio.calbertofilho.killemall.objects.TileMap;
+import br.studio.calbertofilho.killemall.objects.blocks.NormalBlock;
 import br.studio.calbertofilho.killemall.view.graphics.Sprite;
 
 public class TileNormal extends TileMap {

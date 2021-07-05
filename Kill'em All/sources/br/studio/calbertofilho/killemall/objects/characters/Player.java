@@ -1,4 +1,4 @@
-package br.studio.calbertofilho.killemall.objects.entities.characters;
+package br.studio.calbertofilho.killemall.objects.characters;
 
 import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
@@ -6,7 +6,7 @@ import java.awt.event.MouseEvent;
 import br.studio.calbertofilho.killemall.containers.VectorPosition;
 import br.studio.calbertofilho.killemall.controllers.handlers.KeyboardHandler;
 import br.studio.calbertofilho.killemall.controllers.handlers.MouseHandler;
-import br.studio.calbertofilho.killemall.objects.entities.Character;
+import br.studio.calbertofilho.killemall.objects.Character;
 import br.studio.calbertofilho.killemall.view.graphics.Sprite;
 
 public class Player extends Character {

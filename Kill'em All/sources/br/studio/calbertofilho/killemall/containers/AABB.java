@@ -1,6 +1,6 @@
 package br.studio.calbertofilho.killemall.containers;
 
-import br.studio.calbertofilho.killemall.objects.entities.Character;
+import br.studio.calbertofilho.killemall.objects.Character;
 
 public class AABB { //Axis Aligned Bounding Boxes
 

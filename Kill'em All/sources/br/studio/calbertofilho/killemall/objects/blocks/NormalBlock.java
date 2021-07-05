@@ -1,10 +1,10 @@
-package br.studio.calbertofilho.killemall.objects.tiles.blocks;
+package br.studio.calbertofilho.killemall.objects.blocks;
 
 import java.awt.image.BufferedImage;
 
 import br.studio.calbertofilho.killemall.containers.AABB;
 import br.studio.calbertofilho.killemall.containers.VectorPosition;
-import br.studio.calbertofilho.killemall.objects.tiles.Block;
+import br.studio.calbertofilho.killemall.objects.Block;
 
 public class NormalBlock extends Block {
 

@@ -1,4 +1,4 @@
-package br.studio.calbertofilho.killemall.containers;
+package br.studio.calbertofilho.killemall.objects;
 
 import java.awt.Graphics2D;
 
