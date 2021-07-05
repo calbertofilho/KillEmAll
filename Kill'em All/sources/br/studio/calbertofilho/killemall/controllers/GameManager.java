@@ -3,7 +3,6 @@ package br.studio.calbertofilho.killemall.controllers;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 
-import br.studio.calbertofilho.killemall.Panel;
 import br.studio.calbertofilho.killemall.containers.VectorPosition;
 import br.studio.calbertofilho.killemall.controllers.handlers.KeyboardHandler;
 import br.studio.calbertofilho.killemall.controllers.handlers.MouseHandler;
@@ -12,6 +11,7 @@ import br.studio.calbertofilho.killemall.states.GameOverState;
 import br.studio.calbertofilho.killemall.states.MenuState;
 import br.studio.calbertofilho.killemall.states.PauseState;
 import br.studio.calbertofilho.killemall.states.PlayState;
+import br.studio.calbertofilho.killemall.view.Panel;
 
 public class GameManager {
 

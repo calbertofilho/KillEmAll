@@ -1,4 +1,4 @@
-package br.studio.calbertofilho.killemall;
+package br.studio.calbertofilho.killemall.view;
 
 import java.awt.Color;
 import java.awt.Dimension;

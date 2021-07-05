@@ -1,4 +1,4 @@
-package br.studio.calbertofilho;
+package br.studio.calbertofilho.killemall;
 
 import br.studio.calbertofilho.killemall.view.Window;
 

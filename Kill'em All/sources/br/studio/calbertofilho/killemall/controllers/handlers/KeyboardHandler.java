@@ -4,7 +4,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
-import br.studio.calbertofilho.killemall.Panel;
+import br.studio.calbertofilho.killemall.view.Panel;
 
 public class KeyboardHandler implements KeyListener {
 

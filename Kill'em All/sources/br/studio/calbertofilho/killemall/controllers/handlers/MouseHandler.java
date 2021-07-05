@@ -4,7 +4,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-import br.studio.calbertofilho.killemall.Panel;
+import br.studio.calbertofilho.killemall.view.Panel;
 
 public class MouseHandler implements MouseListener, MouseMotionListener {
 

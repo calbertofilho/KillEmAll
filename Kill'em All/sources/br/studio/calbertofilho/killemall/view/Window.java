@@ -5,8 +5,6 @@ import java.awt.image.BufferStrategy;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
-import br.studio.calbertofilho.killemall.Panel;
-
 /**
  * Classe responsável pela criação e manipulação da janela do jogo
  * 
