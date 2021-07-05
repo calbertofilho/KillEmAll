@@ -21,7 +21,7 @@ public class TileNormal extends TileMap {
 		for (int i = 0; i < (width * height); i++) {
 			tmp = Integer.parseInt(tmpBlock[i].replaceAll("\\s+", ""));
 			if (tmp != 0)
-				blocks.add(new NormalBlock(sprite.getSprite((int) ((tmp - 1) % tileColumns), (int) ((tmp - 1) / tileColumns)), new VectorPosition(((int) (i % width)), ((int) (i / height))), tileWidth, tileHeight));
+				blocks.add(new NormalBlock(sprite.getSprite((int) ((tmp - 1) % tileColumns), (int) ((tmp - 1) / tileColumns)), new VectorPosition(((int) (i % width) * tileWidth), ((int) (i / height) * tileHeight)), tileWidth, tileHeight));
 		}
 	}
 

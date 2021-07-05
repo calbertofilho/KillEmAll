@@ -64,7 +64,7 @@ public class TileMapManager {
 			sprite = new Sprite("assets\\tiles\\" + imagePath, tileWidth, tileHeight);
 			list = document.getElementsByTagName("layer");
 			layers = list.getLength();
-			data = new String[layers];
+			data = new String[layers - 1];
 			for (int i = 0; i < data.length; i++) {
 				node = list.item(i);
 				element = (Element) node;
