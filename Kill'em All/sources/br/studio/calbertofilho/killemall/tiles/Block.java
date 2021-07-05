@@ -23,7 +23,7 @@ public abstract class Block {
 
 	public void render(Graphics2D graphics) {
 		graphics.drawImage(image, (int) position.getWorldVar().x, (int) position.getWorldVar().y, width, height, null);
-		System.out.println(getClass().getSimpleName());
+//		System.out.println(getClass().getSimpleName());
 	}
 
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
- <tileset firstgid="1" name="dungeon_tiles_formatted_v2" tilewidth="16" tileheight="16" tilecount="299" columns="23">
-  <image source="dungeon_tiles_formatted_v2.png" width="368" height="208"/>
+ <tileset firstgid="1" name="Dungeon" tilewidth="16" tileheight="16" tilecount="299" columns="23">
+  <image source="Dungeon.png" width="368" height="208"/>
  </tileset>
  <layer id="1" name="Solid" width="50" height="50">
   <data encoding="csv">
