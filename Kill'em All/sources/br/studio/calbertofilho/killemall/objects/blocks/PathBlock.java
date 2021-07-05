@@ -7,9 +7,9 @@ import br.studio.calbertofilho.killemall.containers.AABB;
 import br.studio.calbertofilho.killemall.containers.VectorPosition;
 import br.studio.calbertofilho.killemall.objects.Block;
 
-public class NormalBlock extends Block {
+public class PathBlock extends Block {
 
-	public NormalBlock(BufferedImage image, VectorPosition position, int width, int height) {
+	public PathBlock(BufferedImage image, VectorPosition position, int width, int height) {
 		super(image, position, width, height);
 	}
 

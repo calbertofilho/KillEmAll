@@ -13,8 +13,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import br.studio.calbertofilho.killemall.objects.TileMap;
-import br.studio.calbertofilho.killemall.objects.tiles.TileNormal;
-import br.studio.calbertofilho.killemall.objects.tiles.TileDecoration;
+import br.studio.calbertofilho.killemall.objects.tiles.TilePath;
+import br.studio.calbertofilho.killemall.objects.tiles.TileSolid;
 import br.studio.calbertofilho.killemall.view.graphics.Sprite;
 
 public class TileMapManager {
@@ -64,7 +64,7 @@ public class TileMapManager {
 			sprite = new Sprite("assets\\tiles\\" + imagePath, tileWidth, tileHeight);
 			list = document.getElementsByTagName("layer");
 			layers = list.getLength();
-			data = new String[layers - 1];
+			data = new String[layers];
 			for (int i = 0; i < data.length; i++) {
 				node = list.item(i);
 				element = (Element) node;
@@ -76,9 +76,9 @@ public class TileMapManager {
 				data[i] = element.getElementsByTagName("data").item(0).getTextContent();
 				System.out.println("------ " + layerName + " ------\n" + data[i]);
 				if (i >= 1)
-					tileMap.add(new TileNormal(data[i], sprite, width, height, blockWidth, blockHeight, tileColumns));
+					tileMap.add(new TilePath(data[i], sprite, width, height, blockWidth, blockHeight, tileColumns));
 				else
-					tileMap.add(new TileDecoration(data[i], sprite, width, height, blockWidth, blockHeight, tileColumns));
+					tileMap.add(new TileSolid(data[i], sprite, width, height, blockWidth, blockHeight, tileColumns));
 			}
 		} catch (Exception e) {
 			System.out.println("ERROR: Can not read tilemap");

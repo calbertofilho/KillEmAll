@@ -7,14 +7,15 @@ import br.studio.calbertofilho.killemall.containers.VectorPosition;
 import br.studio.calbertofilho.killemall.controllers.handlers.KeyboardHandler;
 import br.studio.calbertofilho.killemall.controllers.handlers.MouseHandler;
 import br.studio.calbertofilho.killemall.objects.Character;
+import br.studio.calbertofilho.killemall.states.PlayState;
 import br.studio.calbertofilho.killemall.view.graphics.Sprite;
 
 public class Player extends Character {
 
 	public Player(Sprite sprite, VectorPosition origin, int size) {
 		super(sprite, origin, size);
-		setMaxSpeed(4f);
-		setAcc(3f);
+		setMaxSpeed(3f);
+		setAcc(2f);
 		setDeacc(0.3f);
 	}
 
@@ -33,6 +34,8 @@ public class Player extends Character {
 	public void update() {
 		super.update();
 		move();
+		PlayState.setMapPosX(dx);
+		PlayState.setMapPosY(dy);
 		position.addX(dx);
 		position.addY(dy);
 	}
@@ -82,7 +85,7 @@ public class Player extends Character {
 
 	@Override
 	public void render(Graphics2D graphics) {
-		graphics.drawImage(animation.getImage(), ((int) position.x), ((int) position.y), size, size, null);
+		graphics.drawImage(animation.getImage(), ((int) position.getWorldVar().x), ((int) position.getWorldVar().y), size, size, null);
 	}
 
 }

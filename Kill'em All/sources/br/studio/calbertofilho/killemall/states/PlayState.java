@@ -14,17 +14,21 @@ import br.studio.calbertofilho.killemall.view.graphics.Sprite;
 
 public class PlayState extends AbstractState {
 
+	private final int PLAYER_SIZE = 64;
 	private Font font00, font01, font02, font03, font04, font05, font06, font07, font08, font09, font10, font11, font12, font13, font14;
 	private Player player;
 	private String fps, text00, text01;
 	private int score, fontSize, offSet;
 	private TileMapManager tileManager;
+	private static VectorPosition map;
 
 	public PlayState(GameManager gameManager) {
 		super(gameManager);
 		score = 0;
 		fontSize = 20;
 		offSet = 20;
+		map = new VectorPosition();
+		VectorPosition.setWorldVar(map.x, map.y);
 		tileManager = new TileMapManager("assets\\tiles\\tilemap.tmx");
 		font00 = new Font("assets\\fonts\\font.png", 10, 10);
 		font01 = new Font("assets\\fonts\\fontBattleCircuit.png", 40, 40);
@@ -41,9 +45,17 @@ public class PlayState extends AbstractState {
 		font12 = new Font("assets\\fonts\\fontRType.png", 40, 40);
 		font13 = new Font("assets\\fonts\\fontStreetFighterII.png", 40, 40);
 		font14 = new Font("assets\\fonts\\fontSuperMarioBros3.png", 40, 40);
-		player = new Player(new Sprite("assets\\images\\players\\human.png", 64, 64), new VectorPosition(100, 100), 64);
-//		player = new Player(new Sprite("assets\\images\\players\\golem.png", 64, 64), new VectorPosition(100, 100), 64);
-//		player = new Player(new Sprite("assets\\images\\players\\sorcerer.png", 32, 32), new VectorPosition(100, 100), 64);
+		player = new Player(new Sprite("assets\\images\\players\\human.png", 64, 64), new VectorPosition((GameManager.getGameWidth() / 2) - (PLAYER_SIZE / 2), (GameManager.getGameHeight() / 2) - (PLAYER_SIZE / 2)), PLAYER_SIZE);
+//		player = new Player(new Sprite("assets\\images\\players\\golem.png", 64, 64), new VectorPosition((GameManager.getGameWidth() / 2) - (PLAYER_SIZE / 2), (GameManager.getGameHeight() / 2) - (PLAYER_SIZE / 2)), PLAYER_SIZE);
+//		player = new Player(new Sprite("assets\\images\\players\\sorcerer.png", 32, 32), new VectorPosition((GameManager.getGameWidth() / 2) - (PLAYER_SIZE / 2), (GameManager.getGameHeight() / 2) - (PLAYER_SIZE / 2)), PLAYER_SIZE);
+	}
+
+	public static void setMapPosX(float x) {
+		map.x += x;
+	}
+
+	public static void setMapPosY(float y) {
+		map.y += y;
 	}
 
 	@Override
@@ -53,6 +65,7 @@ public class PlayState extends AbstractState {
 
 	@Override
 	public void update() {
+		VectorPosition.setWorldVar(map.x, map.y);
 		player.update();
 	}
 

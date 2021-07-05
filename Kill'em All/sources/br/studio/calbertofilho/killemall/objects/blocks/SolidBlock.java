@@ -8,9 +8,9 @@ import br.studio.calbertofilho.killemall.containers.AABB;
 import br.studio.calbertofilho.killemall.containers.VectorPosition;
 import br.studio.calbertofilho.killemall.objects.Block;
 
-public class DecorationBlock extends Block {
+public class SolidBlock extends Block {
 
-	public DecorationBlock(BufferedImage image, VectorPosition position, int width, int height) {
+	public SolidBlock(BufferedImage image, VectorPosition position, int width, int height) {
 		super(image, position, width, height);
 	}
 

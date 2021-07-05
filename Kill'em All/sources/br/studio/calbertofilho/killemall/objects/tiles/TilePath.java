@@ -6,22 +6,22 @@ import java.util.ArrayList;
 import br.studio.calbertofilho.killemall.containers.VectorPosition;
 import br.studio.calbertofilho.killemall.objects.Block;
 import br.studio.calbertofilho.killemall.objects.TileMap;
-import br.studio.calbertofilho.killemall.objects.blocks.NormalBlock;
+import br.studio.calbertofilho.killemall.objects.blocks.PathBlock;
 import br.studio.calbertofilho.killemall.view.graphics.Sprite;
 
-public class TileNormal extends TileMap {
+public class TilePath extends TileMap {
 
 	private ArrayList<Block> blocks;
 	private String[] tmpBlock;
 	private int tmp;
 
-	public TileNormal(String data, Sprite sprite, int width, int height, int tileWidth, int tileHeight, int tileColumns) {
+	public TilePath(String data, Sprite sprite, int width, int height, int tileWidth, int tileHeight, int tileColumns) {
 		blocks = new ArrayList<Block>();
 		tmpBlock = data.split(",");
 		for (int i = 0; i < (width * height); i++) {
 			tmp = Integer.parseInt(tmpBlock[i].replaceAll("\\s+", ""));
 			if (tmp != 0)
-				blocks.add(new NormalBlock(sprite.getSprite((int) ((tmp - 1) % tileColumns), (int) ((tmp - 1) / tileColumns)), new VectorPosition(((int) (i % width) * tileWidth), ((int) (i / height) * tileHeight)), tileWidth, tileHeight));
+				blocks.add(new PathBlock(sprite.getSprite((int) ((tmp - 1) % tileColumns), (int) ((tmp - 1) / tileColumns)), new VectorPosition(((int) (i % width) * tileWidth), ((int) (i / height) * tileHeight)), tileWidth, tileHeight));
 		}
 	}
 
