@@ -80,6 +80,7 @@ public class TileMapManager {
 				else
 					tileMap.add(new TileSolid(data[i], sprite, width, height, blockWidth, blockHeight, tileColumns));
 			}
+			System.out.println(tileCount + " blocks were loading on map...");
 		} catch (Exception e) {
 			System.out.println("ERROR: Can not read tilemap");
 			e.printStackTrace();
