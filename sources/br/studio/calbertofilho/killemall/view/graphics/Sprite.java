@@ -32,29 +32,6 @@ public class Sprite {
 		this(file, DEFAULT_TILE_SIZE, DEFAULT_TILE_SIZE);
 	}
 	
-	public void setSize(int width, int height) {
-		setWidth(width);
-		setHeight(height);
-	}
-
-	public int getHeight() {
-		return height;
-	}
-
-	public int getWidth() {
-		return width;
-	}
-	
-	public void setHeight(int height) {
-		this.height = height;
-		heightSprite = SPRITESHEET.getHeight() / height;
-	}
-	
-	public void setWidth(int width) {
-		this.width = width;
-		widthSprite = SPRITESHEET.getWidth() / width;
-	}
-
 	private BufferedImage loadSprite(String file) {
 		sprite = null;
 		try {
@@ -107,6 +84,29 @@ public class Sprite {
 			posX += xOffset;
 			posY += yOffset;
 		}
+	}
+
+	public void setSize(int width, int height) {
+		setWidth(width);
+		setHeight(height);
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+	
+	public void setHeight(int height) {
+		this.height = height;
+		heightSprite = SPRITESHEET.getHeight() / height;
+	}
+	
+	public void setWidth(int width) {
+		this.width = width;
+		widthSprite = SPRITESHEET.getWidth() / width;
 	}
 
 }
